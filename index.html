@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta name="description" content="Personal profile page of Govind">
+       <title>Govind's  Profile</title>
+       <link rel="icon" href="trophy.png" type="image/x-icon">
+       <link rel="stylesheet" href="styles.css">
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+       <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+            <a href="index.html" class="nav-logo">
+                <img src="img/govind.png" alt="Govind's Logo">
+            </a>
+            <div class="nav-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        <div class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact Me</a>
+            <!--<a href="index.html">Home</a>
+                <a href="contact.html">Contact Me</a>-->
+                <a href="resume.pdf" class="resume-button" download>Download Resume</a>
+                <div id="dark-mode-toggle" class="dark-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+        </div>
+        </nav>
+
+
+         <header>
+         <h1>This is Govind, a <span class="about-me"></span></h1>
+         <p>Welcome to My World !</p>
+         </header>
+
+        <center>
+        <section>
+         <h2>About me</h2>
+         <p> Hello! I'm Govind, and here's a little info about me</p>
+         <img src="Self pic.png" alt="Govind pic">
+        </section> 
+        <hr>
+
+           <section>
+            <h2>My skills</h2>
+            <div class="skills-list">
+                <ul class="skills-list">
+                    <li>Web Development</li>
+                    <li>Graphic Design</li>
+                    <li>Photography</li>
+                </ul>
+            </div>                        
+           </section>
+
+           <section class="horizontal-scroll">
+             <div class="icon-container">
+                <img src="icon/html.png" alt="Icon 1">
+                <img src="icon/css.png" alt="Icon 2">
+                <img src="icon/java-script.png" alt="Icon 3">
+                <img src="icon/java.png" alt="Icon 4">
+                <img src="icon/python.png" alt="Icon 5">
+                <img src="icon/php.png" alt="Icon 6">
+                <img src="icon/elephant.png" alt="Icon 7">
+                <img src="icon/node-js.png" alt="Icon 8">
+                <img src="icon/physics.png" alt="Icon 9">
+                <img src="icon/sql.png" alt="icon 10">
+             </div>
+           </section>  
+           <hr>
+
+        <section id="programming-languages">
+            <h2>Programming Languages</h2>
+            <div class="skill">
+                <p>JavaScript</p>
+                <div class="progress"> <div class="progress-bar" data-progress="80"></div></div>
+            </div>
+            <div class="skill">
+                <p>HTML</p>
+                <div class="progress"> <div class="progress-bar" data-progress="90"></div></div>
+            </div>
+            <div class="skill">
+                <p>CSS</p>
+                <div class="progress"> <div class="progress-bar" data-progress="60"></div></div>
+            </div>         
+        </section>
+        <hr>
+
+        <section>
+            <h2>My Projects</h2>
+        <p>Take a look at my works.</p>
+        <section id="projects">
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="img/1.png" alt="Project 1">
+                    <h3>Smart Car</h3>
+                    <p>Smart Car project</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal1">Know More</a>
+                </div>
+            </div>
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="img/2.png" alt="Project 2">
+                    <h3>Fingerprint Door Lock</h3>
+                    <p>Arduino FP DoorLock Project </p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal2">Know More</a>
+                </div>
+            </div>
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="img/3.png" alt="Project 3">
+                    <h3>Web Development</h3>
+                    <p>Web using HTML & CSS</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal3">Know More</a>
+                </div>
+            </div>
+
+        </section>  
+        <hr>  
+
+    <section>
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email"><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your Message"></textarea><br><br>
+
+        <button type="Submit">Send</button>
+
+        </form>
+        </section>
+           <hr>
+
+        <section>
+            <h2>Contact Information</h2>
+            <p> Let's Connect</p>
+            <p><a href="mailto:choudharygovind553@gmail.com" class="icon-link email-icon"><i class="fas fa-envelope"></i></a> 
+            <a href="https://www.linkedin.com/in/govind-choudhary-967960285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon-link linkedin-icon"><i class="fab fa-linkedin"></i></a>
+        </section> 
+    </center>    
+    </body>    
+
+    <footer>
+        <p>&copy; 2024 Govind. Build by Govind Choudhari.</p>
+    </footer>
+
+    <!--Project Information Modal-->>
+    <!--Project Information Modal-->>
+    <div id="projectModal1" class="modal" style="display: none;">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Project TItle 1 </h2>
+        <hr>
+        <div class="modal-body">
+            <div class="modal-row">
+                <div class="column description">
+                    <p>Short Project Overview: This Project is a comprehensive exploration.....</p>
+                    <a href="https://github.comyourgithubrepo" target="_blank" class="github-link"><i class="fas fa-github"></i></a>
+                    </div>
+                    <div class="column image-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="img/1.png" alt="Project Image 1">
+                                <img src="img/2.png" alt="Project Image 2">
+                                <img src="img/3.png" alt="Project Image 3">
+                            </div>
+                            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="moveSlide(-1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Project Video </h3>
+                    <iframe width="560" height="315" src="Smart Car.mp4" frameborder="0" allow="accelerometer"></iframe>
+                    </div>
+                </div>
+                <!---Additional Modal Content -->>
+            </div>
+        </div>
+    </div>
+
+    <!--Project Information Modal-->>
+    <!--Project Information Modal-->>
+    <div id="projectModal2" class="modal" style="display: none;">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Project TItle 2 </h2>
+        <hr>
+        <div class="modal-body">
+            <div class="modal-row">
+                <div class="column description">
+                    <p>Short Project Overview: This Project is a comprehensive exploration.....</p>
+                    <a href="https://github.comyourgithubrepo" target="_blank" class="github-link"><i class="fas fa-github"></i></a>
+                    </div>
+                    <div class="column image-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="img/1.png" alt="Project Image 1">
+                                <img src="img/2.png" alt="Project Image 2">
+                                <img src="img/3.png" alt="Project Image 3">
+                            </div>
+                            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="moveSlide(-1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Project Video </h3>
+                    <iframe width="560" height="315" src="Fingerprint Door Lock.mp4" frameborder="0" allow="accelerometer"></iframe>
+                    </div>
+                </div>
+                <!---Additional Modal Content -->>
+            </div>
+        </div>
+    </div>
+
+    <!--Project Information Modal-->>
+    <!--Project Information Modal-->>
+    <div id="projectModal3" class="modal" style="display: none;">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Project TItle 3 </h2>
+        <hr>
+        <div class="modal-body">
+            <div class="modal-row">
+                <div class="column description">
+                    <p>Short Project Overview: This Project is a comprehensive exploration.....</p>
+                    <a href="https://github.comyourgithubrepo" target="_blank" class="github-link"><i class="fas fa-github"></i></a>
+                    </div>
+                    <div class="column image-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="img/1.png" alt="Project Image 1">
+                                <img src="img/2.png" alt="Project Image 2">
+                                <img src="img/3.png" alt="Project Image 3">
+                            </div>
+                            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="moveSlide(-1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Project Video </h3>
+                    <iframe width="560" height="315" src="Web using HTML & CSS.mp4" frameborder="0" allow="accelerometer"></iframe>
+                    </div>
+                </div>
+                <!---Additional Modal Content -->>
+            </div>
+        </div>
+    </div>
+
+</html>/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
