@@ -1,13 +1,7 @@
-window.onload = function()
-{
-    alert("Welcome to Govind's  Personal Website.")
+window.onload = function() {
+    alert("Welcome to Govind's Personal Website.");
+    displayDateTime();
 };
-
-// call the function to display date and time when the page loads
-window.onload = function()
-{
-    displayDateTime()
-}
 
 function changeAboutMeText()
 {
@@ -286,16 +280,16 @@ scrollLinks.forEach(link => {
         }
     });
 });
-//toggle menu fucntionality 
+//toggleMenu functionality
 function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    const menuToggle = document.querySelector('.menu-toggle');
-    
-    navLinks.classList.toggle('show');
-    
-    if (navLinks.classList.contains('show')) {
-        menuToggle.textContent = "✖"; 
+    const navMenu = document.querySelector('.nav-menu');
+    const menuToggle = document.querySelector('.nav-toggle');
+
+    navMenu.classList.toggle('active');
+
+    if (navMenu.classList.contains('active')) {
+        menuToggle.textContent = "✖";
     } else {
-        menuToggle.textContent = "☰"; 
+        menuToggle.textContent = "☰";
     }
 }
