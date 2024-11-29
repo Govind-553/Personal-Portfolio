@@ -77,7 +77,7 @@ header {
     text-align: center;
 }
 footer {
-    width: 100%;
+    width: 100% !important;
     background: linear-gradient(to right, #831bcd, #f9620b);
     color: white;
     padding: 40px 0;
