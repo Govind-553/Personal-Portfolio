@@ -205,9 +205,6 @@ document.addEventListener('click', function(e) {
    }
 });     
 }
-
-
-
 // wrong 
 // Select all modal elements
 const projectModals = document.querySelectorAll('.modal');
@@ -268,3 +265,37 @@ knowMoreButtons.forEach((button) => {
     modal.style.display = 'block';
   });
 });
+//scroll functionality  
+const scrollLinks = document.querySelectorAll('a[href^="#"]');
+
+scrollLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const targetId = link.getAttribute('href').slice(1); 
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            const offset = 100;
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+
+            window.scrollTo({
+                top: elementPosition - offset,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+//toggle menu fucntionality 
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    navLinks.classList.toggle('show');
+    
+    if (navLinks.classList.contains('show')) {
+        menuToggle.textContent = "✖"; 
+    } else {
+        menuToggle.textContent = "☰"; 
+    }
+}
