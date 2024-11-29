@@ -344,6 +344,8 @@ form button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px 20px;
     width: 100%;
+    position: fixed;
+    z-index: 100;
   }
   
   .nav-container {
@@ -395,6 +397,9 @@ form button:hover {
     flex-direction: column;
     width: 100%;
     display: none;
+    border: 0;
+    outline: 0;
+    background-color: #fff;
 }
 
 .nav-menu.active {
