@@ -390,26 +390,21 @@ form button:hover {
   }
   
   @media screen and (max-width: 768px) {
-    .nav-menu {
-      flex-direction: column;
-      width: 100%;
-      display: none;
-    }
-  
-    .nav-menu.active {
-      display: flex;
-    }
-  
-    .nav-toggle {
-      display: block;
-      margin-left: auto;
-    }
-    .nav-toggle i {
-      font-size: 24px;
-      cursor: pointer;
-    }
-  }
-  
+.nav-menu {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-toggle {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+}
   .dark-mode .navbar {
     background-color: #333;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
