@@ -5,7 +5,7 @@ window.onload = function() {
 
 function changeAboutMeText()
 {
-    const aboutMeTexts = ["Tech Enthusiast", "Data Scientist", "Full Stack Web Developer "]
+    const aboutMeTexts = ["Tech Enthusiast", "Creative Problem Solver", "Aspiring Full Stack Web Developer"]
     const typingspeed = 100;
     const erasespeed = 50;
     const pauseTime = 1500;
