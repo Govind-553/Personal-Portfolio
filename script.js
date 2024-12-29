@@ -2,6 +2,11 @@ window.onload = function() {
     alert("Welcome to Govind's Personal Website.");
     displayDateTime();
 };
+function displayDateTime() {
+    const now = new Date();
+    const dateTimeString = now.toLocaleString();
+    alert("Current Date and Time: " + dateTimeString);
+}
 
 function changeAboutMeText()
 {

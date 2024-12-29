@@ -1,14 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: 'Poppins', sans-serif;
     background-color: white;
     color: black;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 hr {
@@ -81,13 +84,13 @@ header {
     margin-top: 100px;
 }
 footer {
-    width: 100%;
+    width: 100vw;
     background: linear-gradient(to right, #831bcd, #f9620b);
     color: white;
     padding: 40px 0;
     text-align: center;
     position: relative;
-    bottom: 0;
+    bottom: -20px;
 }
 
 #my-skills {
@@ -133,7 +136,7 @@ form {
     padding: 20px;
     background: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: left; /* Align form elements to the left*/
+    text-align: left;
     box-sizing: border-box;
 }
 
@@ -145,17 +148,24 @@ form {
 }
 
 .form-group label {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-form input[type="text"],
-form input[type="email"],
+form input,
 form textarea {
     width: 100%;
     padding: 5px;
-    border: 1px solid #f5efef;
+    border: 1px solid #ccc;
+    outline: none;
     border-radius: 5px;
-    margin: 5px 0; 
+    margin: 5px 0;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 1px solid #f39c12;
+    box-shadow: 0 0 8px rgba(243, 156, 18, 0.5);
 }
 
 form button {
@@ -167,11 +177,13 @@ form button {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s ease;
     font-size: 10px; 
 }
 
 form button:hover {
     background-image: linear-gradient(to right, orange, #831bcd);
+    transform: scale(1.05);
 }
 
 @media only screen and (max-width: 768px) {
@@ -193,11 +205,11 @@ form button:hover {
     .icon-link {
         width: 40px;
         height: 40px;
-        margin: 0 5px;  /* Adjusts icon size and spacing for smaller screens */
+        margin: 0 5px;
     }
 
     h1, h2{
-        font-size: 16px; /* Adjusts heading sizes for better readability on small devices*/
+        font-size: 16px;
     }
 }
 
@@ -211,7 +223,7 @@ form button:hover {
 }
 
 .horizontal-scroll {
-    overflow-x: hidden; /* Hide any overflowing content */
+    overflow-x: hidden;
     width: 50%;
 } 
 
@@ -384,7 +396,6 @@ form button:hover {
     gap: 1rem;
     flex-grow: 1;
     justify-content: flex-end;
-    margin-right: 15px;
   }
   .nav-menu a{
     text-decoration: none;
@@ -407,7 +418,6 @@ form button:hover {
     background: transparent;
     font-size: 18px;
     transition: transform 0.3s ease;
-    margin-right: 20px;
   }
   .nav-menu a:hover, .nav-menu .resume-button:hover {
     background-color: #f9620b;
@@ -419,8 +429,24 @@ form button:hover {
     color: #fff;
     transform: scale(1.1);
   }
+  .dark-mode .navbar {
+    background-color: #333;
+  }
+  .dark-mode .nav-menu a{
+    color: #fff;
+  }
+  .dark-mode .nav-menu .dark-mode-toggle {
+    color: #fff;
+  }
   .nav-toggle {
     display: none;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    margin-right: 0;
+    font-size: large;
+    font-weight: 700;
   }
   
   @media screen and (max-width: 768px) {
@@ -442,19 +468,41 @@ form button:hover {
     margin-left: auto;
     cursor: pointer;
 }
-  .dark-mode .navbar {
+
+.dark-mode .navbar {
     background-color: #333;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-  }
+}
+.dark-mode .nav-menu {
+    background-color: #333;
+    transition: transform 0.3s ease;
+}
   
-  .dark-mode .nav-menu a, .dark-mode .nav-menu .resume-button {
+ .dark-mode .nav-menu a, .dark-mode .nav-menu .resume-button {
     color: #fff;
-  }
+}
+.dark-mode .nav-menu .dark-mode-toggle {
+    color: #fff;
+}
   
-  .dark-mode .nav-menu a:hover, .dark-mode .nav-menu .resume-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.dark-mode .nav-menu a:hover, .dark-mode .nav-menu .resume-button:hover {
+    background-color: #f9620b;
+    color: #fff;
+    transform: scale(1.1);
+}
+.dark-mode .nav-menu .dark-mode-toggle:hover {
+    background-color: #f9620b;
+    color: #fff;
+    transform: scale(1.1);
+}
+.dark-mode button {
+    background-color: transparent;
+    border: none;
+    margin-right: 0;
+    font-size: large;
+    font-weight: 700;
   }
-  
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -609,7 +657,7 @@ iframe {
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-}
+
 
 
 
