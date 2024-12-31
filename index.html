@@ -21,10 +21,10 @@
     </div>
     <button class="nav-toggle" onclick="toggleMenu()">☰</button>
     <div class="nav-menu">
-        <a>About</a>
-        <a>Services</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-        <a href="https://drive.google.com/file/d/16D9Wrviohv7yTMaXbl58cB2StpFfI4PF/view?usp=sharing" class="resume-button">Download CV</a>
         <div id="dark-mode-toggle" class="dark-mode-toggle">
             <i class="fas fa-moon"></i>
         </div>
@@ -32,14 +32,15 @@
 </nav>
 
 <header>
-    <div class="header-grid">
+    <div class="header-grid" id="home">
         <div class="left-grid">
-            <h1>This is Govind,a <span class="about-me"></span></h1>
-            <h2>About me</h2>
-            <p>🌟 Aspiring Full Stack Developer with a passion for crafting intuitive
-            and efficient web applications. 📚 Pursuing a Bachelor's in Information
-            Technology at Atharva College of Engineering, Malad, Mumbai.
-           💡 Always eager to explore cutting-edge technologies<br>and expand my skillset.</p>
+            <h2>Hello, It's Me</h2>
+            <h1>Govind Choudhari</h1>
+            <h2>And I'm a <span class="about-me"></span></h2>
+            <p>Aspiring Full Stack Developer passionate about crafting efficient web
+            applications, currently pursuing a Bachelor's in IT at Atharva College
+            of Engineering, Mumbai.</p>
+            <button onclick="window.location.href='https://drive.google.com/file/d/16D9Wrviohv7yTMaXbl58cB2StpFfI4PF/view?usp=sharing'">Download CV</button>
         </div>
         <div class="right-grid">
             <img src="img/Self_pic.png" alt="Govind pic" class="frame-img">
@@ -127,13 +128,13 @@
     <h2>Contact Me</h2>
     <form>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your Name"><br><br>
+        <input type="text" id="name" name="name" placeholder="Enter Your Name">
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Your Email"><br><br>
+        <input type="email" id="email" name="email" placeholder="Enter Your Email">
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Your Message"></textarea><br><br>
+        <textarea id="message" name="message" placeholder="Enter Message"></textarea>
 
         <button type="Submit">Send</button>
         </form>
@@ -148,7 +149,7 @@
         </section>     
 
     <footer>
-        <p>&copy; 2024 Govind. Build by Govind Choudhari.</p>
+        <p>© 2024 Govind Choudhari. All rights reserved.</p>
     </footer>
     </body>
 </html>

@@ -52,7 +52,7 @@ a:hover {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    color: white;
+    color: #fff;
     font-size: 24px;
     transition: transform 0.3s ease;
 }
@@ -70,15 +70,15 @@ a:hover {
 }
 
 .icon-link:hover {
+    color: #fff;
     transform: scale(1.1);
-    color: white;
 }
 
 /* Header and Footer */
 .header-grid {
     width: 1200px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
     padding: 20px;
@@ -97,15 +97,21 @@ a:hover {
     flex-direction: column;
     justify-content: flex-start;
     margin-left: 120px;
+    gap: 20px;
     animation: fadeIn 1s ease-in-out;
+}
+
+.left-grid h1, 
+.left-grid h2, 
+.left-grid p {
+    margin: 0; 
 }
 
 .right-grid {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
-    gap: 10px;
     margin-right: 120px;
 }
 
@@ -115,6 +121,7 @@ a:hover {
     height: auto;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out;
+    position: relative;
 }
 
 .frame-img:hover {
@@ -123,8 +130,8 @@ a:hover {
 
 .about-me {
     width: 100%;
-    max-width: 300px;
-    display: block;
+    max-width: 600px;
+    display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: clip;
@@ -138,6 +145,23 @@ a:hover {
     to {
         width: 100%;
     }
+}
+.left-grid button {
+    font-size: 18px;
+    font-weight: 600;
+    width: 180px;
+    background-color: #f9620b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(249, 98, 11, 0.5);
+}
+.left-grid button:hover {
+    background-color: #e0550a;
+    transform: scale(1.05);
 }
 
 footer {
@@ -192,28 +216,25 @@ form {
     width: 100%;
     max-width: 500px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 20px 50px;
     background: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-sizing: border-box;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    margin-bottom: 10px;
+form label {
+    width: 100%;
+    margin: 20px 15px 0px 0px;
+    text-align: left;
 }
 
 form input,
 form textarea {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
     outline: none;
     border-radius: 5px;
@@ -230,8 +251,8 @@ form textarea:focus {
 form button {
     border: none;
     width: 100%;
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 15px;
+    margin-top: 25px;
     background-image: linear-gradient(to right, #831bcd, #f9620b);
     color: white;
     border-radius: 5px;
@@ -471,8 +492,8 @@ form button:hover {
     font-weight: 600;
     background: transparent;
     font-size: 18px;
-    transition: transform 0.3s ease;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .nav-menu .dark-mode-toggle {
@@ -483,42 +504,42 @@ form button:hover {
     font-weight: 600;
     background: transparent;
     font-size: 18px;
-    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .nav-menu a:hover, .nav-menu .resume-button:hover {
-    background-color: #f9620b;
-    color: #fff;
-    transform: scale(1.1);
+    color: #f9620b;
 }
 
 .nav-menu .dark-mode-toggle:hover {
-    background-color: #f9620b;
-    color: #fff;
-    transform: scale(1.1);
+    color: #f9620b;
 }
 
 .dark-mode .header-grid {
-    background-color: #333;
-    color: #fff;
+    background-color: black;
+    color: white;
 }
 
 .dark-mode .navbar {
-    background-color: #333;
+    background-color: black;
 }
 
 .dark-mode .nav-menu a {
     color: #fff;
 }
+.dark-mode .nav-menu a:hover {
+    color: #f9620b;
+}
 
 .dark-mode .nav-menu .dark-mode-toggle {
     color: #fff;
 }
-
+.dark-mode .nav-menu .dark-mode-toggle:hover {
+    color: #f9620b;
+}
 .nav-toggle {
     display: none;
 }
-
 button {
     background-color: transparent;
     border: none;
@@ -526,6 +547,7 @@ button {
     font-size: large;
     font-weight: 700;
 }
+
 
 @media screen and (max-width: 768px) {
     .nav-menu {
@@ -565,15 +587,11 @@ button {
     }
 
     .dark-mode .nav-menu a:hover, .dark-mode .nav-menu .resume-button:hover {
-        background-color: #f9620b;
-        color: #fff;
-        transform: scale(1.1);
+        color: #f9620b;
     }
 
     .dark-mode .nav-menu .dark-mode-toggle:hover {
-        background-color: #f9620b;
-        color: #fff;
-        transform: scale(1.1);
+        color: #f9620b;
     }
 
     .dark-mode button {
