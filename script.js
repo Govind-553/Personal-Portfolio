@@ -63,39 +63,6 @@ document.addEventListener('DOMContentLoaded', function()  {
 // call function to add modification 
 changeAboutMeText();
 
-// Get all progress bars
-const progressBars = document.querySelectorAll('.progress-bar');
-
-// Loop through each progress bar
-progressBars.forEach(progressBar => {
-  // Get the data-progress attribute value
-  const progress = progressBar.dataset.progress;
-
-  // Set the width of the progress bar
-  progressBar.style.width = `${progress}%`;
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const progressBar = entry.target.querySelector('.progress-bar');
-                const progress = progressBar.dataset.progress;
-
-                progressBar.style.setProperty('--progress',  '${progress}%');
-                progressBar.classList.add('animated');
-                console.log('Added animated class to progress bar');
-                observer.unobserve(entry.target);
-            }
-        });
-    });
-
-    const programmingLanguages = document.querySelectorAll('#programming-languages .skill');
-    programmingLanguages.forEach(skill => {
-        observer.observe(skill);
-    });
-});
-
 /*----------------------------------------------Modal Scripts- Project POPup-------------------------------------------- */
 
 document.querySelectorAll('.btn.know-more').forEach(button => {
