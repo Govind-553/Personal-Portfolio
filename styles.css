@@ -603,6 +603,206 @@ button {
     }
 }
 
+    #my-skills .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 3rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .progress-section, .box {
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .progress-section h2, .box .content .percent::before {
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+        }
+
+        .progress-section h2 span img {
+            margin-left: 8px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .progress-bar {
+            background: #e2e8f0;
+            border-radius: 9999px;
+            height: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress {
+            background: #3b82f6;
+            height: 100%;
+            border-radius: 9999px;
+            width: 0;
+        }
+
+        .progress.gradient {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        }
+
+        .auto-progress {
+            animation: load-progress 1.5s ease-out forwards;
+        }
+
+        @keyframes load-progress {
+            from {
+                width: 0;
+            }
+            to {
+                width: var(--target-width);
+            }
+        }
+
+        .auto-progress {
+            --target-width: 0%;
+        }
+
+        .auto-progress[data-target="90"] {
+            --target-width: 90%;
+        }
+
+        .auto-progress[data-target="80"] {
+            --target-width: 80%;
+        }
+
+        .auto-progress[data-target="75"] {
+            --target-width: 75%;
+        }
+
+        .auto-progress[data-target="70"] {
+            --target-width: 70%;
+        }
+
+        .auto-progress[data-target="65"] {
+            --target-width: 65%;
+        }
+
+        .auto-progress[data-target="60"] {
+            --target-width: 60%;
+        }
+
+        .auto-progress[data-target="55"] {
+            --target-width: 55%;
+        }
+
+        .auto-progress[data-target="50"] {
+            --target-width: 50%;
+        }
+
+        .auto-progress[data-target="45"] {
+            --target-width: 45%;
+        }
+
+        .box .content .percent {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .box .content .percent::before {
+            content: attr(data-text);
+            position: absolute;
+            inset: 20px;
+            background: #555;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+            text-transform: capitalize;
+        }
+
+        .box .content .percent svg {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform: rotate(-90deg);
+        }
+
+        .box .content .percent svg circle {
+            width: 100%;
+            height: 100%;
+            fill: transparent;
+            stroke-width: 3;
+            stroke: rgba(0, 0, 0, 0.1);
+        }
+
+        .box .content .percent svg circle:nth-child(2) {
+            stroke: #555;
+            stroke-dasharray: 596;
+            stroke-dashoffset: calc(596 - (596 * var(--num)) / 100);
+            transition: stroke-dashoffset 1s ease;
+        }
+
+        .box .content .percent .dot {
+            position: absolute;
+            inset: 5px;
+            z-index: 10;
+            animation: animateDot 2s linear forwards;
+        }
+
+        @keyframes animateDot {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(calc(3.6deg * var(--num)));
+            }
+        }
+
+        .box .content .percent .dot::before {
+            content: '';
+            position: absolute;
+            top: -7px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 14px;
+            background: #555;
+            border-radius: 50%;
+        }
+
+        .box .content .number {
+            position: relative;
+            inset: 0;
+            opacity: 0;
+            animation: fadeIn 1s linear forwards;
+            animation-delay: 2.5s;
+        }
+
+        .box .content .number h2 {
+            font-size: 2.5rem;
+            color: #555;
+        }
+
+        .box .content .number h2 span {
+            font-weight: 300;
+            font-size: 1.5rem;
+        }
+
 .modal {
     display: none;
     position: fixed;
