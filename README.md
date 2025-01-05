@@ -23,7 +23,7 @@ This portfolio showcases my insatiable curiosity for learning and exploring newl
 
 ## 📬 **Contact**  
 * ✉️ **Email**: choudharygovind553@gmail.com 
-* 🔗 **LinkedIn**:
+* 🔗 **LinkedIn**:https://www.linkedin.com/in/govind-choudhari-967960285
 * 🤝 DM me for **collaboration opportunities** and let's create something extraordinary together!
 
 ## 📸 Live Preview 
