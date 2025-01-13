@@ -420,12 +420,14 @@ form button:hover {
 #projects .thumbnail-content img {
     width: 100%;
     height: 200px;
+    object-fit: contain;
     display: block;
+    border-radius: 10px;
 }
 
 #projects .thumbnail-content h3 {
     margin: 15px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
 }
