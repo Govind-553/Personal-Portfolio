@@ -280,7 +280,7 @@ img {
 /* Form Styles */
 form {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     margin: 20px auto;
     padding: 20px 50px;
     background: white;
@@ -377,55 +377,78 @@ form button:hover {
 
 /* Projects Section */
 #projects {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 70%;
     max-width: 1200px;
     margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
 }
 
-.project-thumbnail {
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 9px 9px rgba(0, 0, 0, 0.1);
+#projects .projects-heading {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.thumbnail-content {
-    padding: 0px 0px 20px 0px;
+#projects .projects-heading h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.thumbnail-content img {
+#projects .projects-heading p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#projects .project-thumbnail {
+    display: grid;
     width: 100%;
-    border-radius: 8px 8px 8px 8px;
-}
-
-.thumbnail-content h3 {
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-.thumbnail-content p {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 45px;
     margin-top: 20px;
 }
 
-.thumbnail-content .btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #831bcd;
-    color: #ffff;
-    text-decoration: none;
-    border-radius: 5px;
+#projects .thumbnail-content {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 9px 9px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
 }
 
-.thumbnail-content .btn:hover {
+#projects .thumbnail-content img {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+#projects .thumbnail-content h3 {
+    margin: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#projects .thumbnail-content .btn {
+    display: inline-block;
+    margin: 25px 0px 25px 0px;
+    padding: 10px 20px;
+    background-color: #831bcd;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#projects .thumbnail-content .btn:hover {
     background-color: #f9620b;
     cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
-    #projects {
+/* Responsive Design */
+@media (max-width: 768px) {
+    #projects .project-thumbnail {
         grid-template-columns: 1fr;
     }
 }
@@ -599,7 +622,7 @@ button {
 
 .progress-section,
 .box {
-    padding: 25px;
+    padding: 15px;
 }
 
 .progress-section h2,
@@ -695,96 +718,96 @@ button {
 }
 
 .box .content .percent {
-    position: relative;
-    width: 150px;
-    height: 150px;
-}
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
 
-.box .content .percent::before {
-  content: attr(data-text);
-  position: absolute;
-  inset: 20px;
-  background: #555;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1rem;
-  text-transform: capitalize;
-}
+        .box .content .percent::before {
+            content: attr(data-text);
+            position: absolute;
+            inset: 20px;
+            background: #555;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+            text-transform: capitalize;
+        }
 
-.box .content .percent svg {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    transform: rotate(270deg);
-}
+        .box .content .percent svg {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform: rotate(-90deg);
+        }
 
-.box .content .percent svg circle {
-    width: 100%;
-    height: 100%;
-    fill: transparent;
-    stroke-width: 3;
-    stroke: rgba(0, 0, 0, 0.1);
-}
+        .box .content .percent svg circle {
+            width: 100%;
+            height: 100%;
+            fill: transparent;
+            stroke-width: 3;
+            stroke: rgba(0, 0, 0, 0.1);
+        }
 
-.box .content .percent svg circle:nth-child(2) {
-    stroke: #555;
-    stroke-dasharray: 440;
-    stroke-dashoffset: calc(400 - (440 * var(--num)) / 100);
-    transition: stroke-dashoffset 1s ease;
-}
+        .box .content .percent svg circle:nth-child(2) {
+            stroke: #555;
+            stroke-dasharray: 596;
+            stroke-dashoffset: calc(596 - (596 * var(--num)) / 100);
+            transition: stroke-dashoffset 1s ease;
+        }
 
-.box .content .percent .dot {
-    position: absolute;
-    inset: 5px;
-    z-index: 10;
-    animation: animateDot 2s linear forwards;
-}
+        .box .content .percent .dot {
+            position: absolute;
+            inset: 5px;
+            z-index: 10;
+            animation: animateDot 2s linear forwards;
+        }
 
-@keyframes animateDot {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(calc(3.6deg * var(--num)));
-    }
-}
+        @keyframes animateDot {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(calc(3.6deg * var(--num)));
+            }
+        }
 
-.box .content .percent .dot::before {
-    content: '';
-    position: absolute;
-    top: -7px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 14px;
-    height: 14px;
-    background: #555;
-    border-radius: 50%;
-}
+        .box .content .percent .dot::before {
+            content: '';
+            position: absolute;
+            top: -7px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 14px;
+            background: #555;
+            border-radius: 50%;
+        }
 
-.box .content .number {
-    position: relative;
-    inset: 0;
-    opacity: 1;
-    animation: fadeIn 1s linear forwards;
-    animation-delay: 2.5s;
-}
+        .box .content .number {
+            position: relative;
+            inset: 0;
+            opacity: 0;
+            animation: fadeIn 1s linear forwards;
+            animation-delay: 2.5s;
+        }
 
-.content .number h2 {
-    font-size: 2.5rem;
-    color: #555;
-    margin-left: -35px;
+        .box .content .number h2 {
+            font-size: 2.5rem;
+            color: #555;
+        }
 
-}
-
-.content .number h2 span {
-    font-weight: 300;
-    font-size: 1.5rem;
-}
+        .box .content .number h2 span {
+            font-weight: 300;
+            font-size: 1.5rem;
+        }
 
 .dark-mode #my-skills h1 { 
     color: #fff;
@@ -800,7 +823,7 @@ button {
     color: #fff;
 }
 .dark-mode .box .content .percent::before {
-    background: #555;
+    background: #333;
 }
 
 .dark-mode .box .content .percent svg circle:nth-child(2) {
