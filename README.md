@@ -27,4 +27,4 @@ This portfolio showcases my insatiable curiosity for learning and exploring newl
 * 🤝 DM me for **collaboration opportunities** and let's create something extraordinary together!
 
 ## 📸 Live Preview 
-**Link🔗**: https://govind-553.github.io/Personal-Portfolio/
+**Link🔗**: https://govind-553.github.io/Personal-Portfolio-Site/
